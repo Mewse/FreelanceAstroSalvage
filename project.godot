@@ -1,0 +1,27 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="FreelanceAstroSalvage"
+config/icon="res://icon.png"
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Asteroids"
+2d_physics/layer_3="Enemies"
+2d_physics/layer_4="Pickups"
+2d_physics/layer_5="Projectiles"
+2d_physics/layer_6="Orbits"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
