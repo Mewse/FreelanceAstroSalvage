@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Asteroid.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1553.0
+margin_top = -1129.0
+margin_right = 2639.0
+margin_bottom = 1832.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = SubResource( 2 )
+expand = true
+stretch_mode = 0
+
+[node name="Player" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 59.834, 342.383 )
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+
+[node name="Asteroid" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 363.436, 233.796 )
+
+[node name="Asteroid2" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 800.922, 613.217 )
+rotation = 1.06107
+scale = Vector2( 1.53274, 1.53274 )
+
+[node name="Asteroid3" parent="." index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 845.396, 155.281 )
+rotation = -1.13101
+scale = Vector2( 0.511606, 0.511606 )
+
+[node name="Asteroid4" parent="." index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 1268.53, 292.035 )
+rotation = -0.629428
+scale = Vector2( 0.942031, 0.942031 )
+
+[node name="Asteroid5" parent="." index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 1482.86, 719.762 )
+rotation = -0.201361
+scale = Vector2( 0.725855, 0.725855 )
+
+[node name="Asteroid6" parent="." index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 1883.79, 357.014 )
+rotation = 1.34407
+scale = Vector2( 1.49541, 1.49541 )
+
+
