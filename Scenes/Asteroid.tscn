@@ -8,7 +8,9 @@
 custom_solver_bias = 0.0
 radius = 148.733
 
-[node name="Asteroid" type="Area2D" index="0"]
+[node name="Asteroid" type="Area2D" index="0" groups=[
+"asteroid",
+]]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -25,8 +27,21 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+show_behind_parent = true
 shape = SubResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 [connection signal="body_entered" from="." to="." method="_on_Asteroid_body_entered"]
+
+[connection signal="body_exited" from="." to="." method="_on_Asteroid_body_exited"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
